@@ -4,11 +4,11 @@
 
 
 
-/* .generalHeading {
+ .generalHeading {
     text-align: center;
     text-shadow:2px 2px 1px red;
     font-size: 50px;
-} */
+} 
 
 #container {
    height:800px;
@@ -222,3 +222,18 @@
     top: 220px;
     left: 49px;
  }  
+ /*------------------------------------- Styling for footer -----------------------------------*/
+
+ footer {
+    color:white;
+   
+   
+    text-align: center;
+    background-color:green;
+ }
+
+ .footerDiv {
+    display: flex;
+    flex-direction: column;
+    align-content:center ;
+ }
