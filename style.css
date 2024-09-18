@@ -4,7 +4,8 @@
 
 
 body{ 
-     
+     height: 100vh;
+     width: 100vw;
     margin:auto;
     
 
@@ -18,8 +19,8 @@ body{
 }
 
 #container {
-   height:100vh;
-   width: 100vw;
+   height:800px;
+   width: 550px;
    border-radius:20px;
    border:10px solid #075758;
    
