@@ -1,21 +1,31 @@
 
 /* ----------------------- Styling for conatiner --------------------------*/  
+
+
+
+
+.generalHeading {
+    text-align: center;
+    text-shadow:2px 2px 1px red;
+    font-size: 50px;
+}
+
 #container {
    height:800px;
    width: 550px;
-  
    border-radius:20px;
+   border:10px solid #075758;
+   
    position:relative;
-   left: 400px;
+   top:20px;
+   margin:auto;
    display: flex;
    align-content: center;
-   box-shadow: 2px  1px #075758;
-   
-}
-   
+} 
 
  /* ------------------------------- Styling for pn(div1) ----------------------------------------*/  
-#pn {
+/* Profile */
+  #profile {
     
     height:170px;
     width:550px;
@@ -25,29 +35,29 @@
     top:30px
     
 }
-
-#s{
+/* Student text */
+#status{
 
     font-size:small;
     font-family: italic;
     position: relative;
     bottom:10px
-}
-
+} 
+/* My name */
 #name {
     
     display:inline-block; 
     position:relative;
-    top:5px;
+    
     left:70px;
-    bottom:30px;
-     font-size: 30px;
+    bottom:8px;
+    font-size: 30px;
     font-weight: 500;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:bisque;
 }
-
-#pic {
+/* style for picture */
+ #pic {
     border:4px solid white;
     border-radius: 25px;
     height:130px;
@@ -55,12 +65,12 @@
     position: relative;
     top:20px;
     left:35px
-   
-}
+    
+} 
 
-/* ------------------------------ Styling for info(div2) ------------------------------- */
- 
-#info {
+/* ------------------------------ Styling for my information(div2) ------------------------------- */
+
+ #info {
     position:relative;
     border-radius: 10px;
     z-index:0;
@@ -68,9 +78,9 @@
      height: 800px;
      
      background-color:#d7d8d8;
-} 
+}  
 
-.heading {
+ .heading {
     position: relative;
     top:230px;
     left:40px;
@@ -113,10 +123,9 @@
     position: relative;
     bottom:5px;
 
-}
+}  
 
 /* -----------------------------   Styling for skills part in html -------------------------  */
-
 #skills {
     height:800px;
     width: 320px;
@@ -154,9 +163,9 @@
     font-weight: 100;
     font-size: small;
     
-}
+} 
 
-.nums {
+ .nums {
     font-size: x-small;
 }
 
@@ -191,9 +200,9 @@
     position: relative;
     top: 215px;
     left: 47px;
- }
+ } 
 
- #exImg {
+  #exImg {
     position: relative;
     top: 230px;
     left: 30px;
@@ -204,12 +213,12 @@
     top:216px;
     left: 30px;
     font-weight: 900;
- }
+ } 
 
- .exPara {
+   .exPara {
     font-size: small;
     font-weight: 100;
     position: relative;
     top: 220px;
     left: 49px;
- }
+ }  
