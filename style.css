@@ -11,11 +11,11 @@ body{
     
 }
 
-.generalHeading {
+/* .generalHeading {
     text-align: center;
     text-shadow:2px 2px 1px red;
     font-size: 50px;
-}
+} */
 
 #container {
    height:800px;
