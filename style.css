@@ -29,7 +29,8 @@
 
 .resumeBottom {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 40px ;
 }
 
 .resumeTop h1 {
@@ -162,13 +163,14 @@ h3 {
 
   .resumeBottom {
     gap: 30px;
+    margin: 0 ;
   }
 
   .resumeLeft {
-    width: 50%;
+    width: 90%;
   }
   .resumeRight {
-    width: 50%;
+    width: 90%;
   }
 
   .resumeTop h1 {
