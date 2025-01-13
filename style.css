@@ -1,239 +1,182 @@
-
-/* ----------------------- Styling for conatiner --------------------------*/  
-
-
-
-
- .generalHeading {
-    text-align: center;
-    text-shadow:2px 2px 1px red;
-    font-size: 50px;
-} 
-
-#container {
-   height:800px;
-   width: 550px;
-   border-radius:20px;
-   border:10px solid #075758;
-   
-   position:relative;
-   
-   margin:auto;
-   display: flex;
-   align-content: center;
-} 
-
- /* ------------------------------- Styling for pn(div1) ----------------------------------------*/  
-/* Profile */
-  #profile {
-    
-    height:170px;
-    width:550px;
-    background-color:#075758;
-    
-    position:absolute;
-    top:30px
-    
-}
-/* Student text */
-#status{
-
-    font-size:small;
-    font-family: italic;
-    position: relative;
-    bottom:10px
-} 
-/* My name */
-#name {
-    
-    display:inline-block; 
-    position:relative;
-    
-    left:70px;
-    bottom:8px;
-    font-size: 30px;
-    font-weight: 500;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:bisque;
-}
-/* style for picture */
- #pic {
-    border:4px solid white;
-    border-radius: 25px;
-    height:130px;
-    width:130px;
-    position: relative;
-    top:20px;
-    left:35px
-    
-} 
-
-/* ------------------------------ Styling for my information(div2) ------------------------------- */
-
- #info {
-    position:relative;
-    border-radius: 10px;
-    z-index:0;
-    width:230px;
-     height: 800px;
-     
-     background-color:#d7d8d8;
-}  
-
- .heading {
-    position: relative;
-    top:230px;
-    left:40px;
-    font-family: 'Arial Narrow';
-    font-weight:550;
+* {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#para {
-    position: relative;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    top:220px;
-    left:40px;
-    font-size: 10px;
-    
+.body {
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 600px;
+  height: 900px;
+  margin: auto;
+  border: 2px solid gray;
+  background-color: #f9f6e6;
+  border-radius: 5px;
+}
+
+.resumeTop {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 0 60px;
+  background-color: rgba(237, 204, 144, 0.4);
+}
+
+.resumeBottom {
+  display: flex;
+  justify-content: space-around;
+}
+
+.resumeTop h1 {
+  color: black;
+}
+
+.resumeTop h4 {
+  color: rgb(61, 58, 58);
+  font-weight: lighter;
+}
+
+.resumeTop img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nameContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.resumeLeft {
+  width: 40%;
+  height: 100vmin;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 30px 0;
+}
+
+.resumeRight {
+  width: 40%;
+  height: 100vmin;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 30px 0;
+}
+
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .contact {
-    position: relative;
-    top:270px;
-    left:40px;
-    font-family: 'Arial Narrow';
-    font-weight:550;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-#num {
-    font-size:9px;
-    font-weight: 400;
-}
-#email {
-    font-size:10px;
-    font-weight: 400;
-    position: relative;
-    bottom:8px
-    
+.school,
+.college,
+.university {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
 }
 
-#logo{
-    font-size:10px;
-    font-weight: 400;
-    position: relative;
-    bottom:5px;
-
-}  
-
-/* -----------------------------   Styling for skills part in html -------------------------  */
-#skills {
-    height:800px;
-    width: 320px;
-     background-color: aliceblue;
- 
+.skills li {
+  margin-top: 3px;
+  color: rgb(61, 58, 58);
 }
 
-#eduImg {
-    position: relative;
-    top:220px;
-    left: 30px;
-    font-weight:900 ;
-    display: inline;
-
+.profile p {
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.4px;
 }
 
-#eduP {
-    position: relative;
-    top:205px;
-    left: 30px;
-    font-weight: 900;
-}
-.uni {
-    position: relative;
-    top:205px;
-    left: 47px;
-    font-size:smaller;
-    font-weight: 900;
-
+h2,
+h3 {
+  color: rgb(193, 139, 3);
+  margin-bottom: 8px;
 }
 
-.u { 
-
-    padding:4px ;
-    font-weight: 100;
-    font-size: small;
-    
-} 
-
- .nums {
-    font-size: x-small;
+.innerContainer p {
+  font-size: 0.95rem;
+  color: rgb(61, 58, 58);
 }
 
-.lang{
-    position: relative;
-    top:206px;
-    left: 30px;
-    font-weight: 900;
+.toggleButton {
+  background-color: black;
 
+  color: white;
+  height: 30px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
-.lInfo {
-    position: relative;
-    left: 20px;
-    bottom:5px;
-    font-weight: 100;
-    font-size: small;
+.toggleButton:hover {
+  background-color: black;
 }
 
-.comSkills {
-    position: relative;
-    top:205px;
-    left: 30px;
-    font-weight: 900;
-
-    
+.hidden {
+  display: none;
 }
 
-.sk {
-    font-size: small;
-    font-weight: 100;
-    position: relative;
-    top: 215px;
-    left: 47px;
- } 
+.bold {
+  text-transform: capitalize;
+  font-weight: bold;
+}
 
-  #exImg {
-    position: relative;
-    top: 230px;
-    left: 30px;
- }
+/* responsive design  */
+@media screen and (max-width: 768px) {
+  .conatiner {
+    /* width: 400px; */
+    height: 100vh;
+    width: 100%;
+  }
 
- #ex {
-    position: relative;
-    top:216px;
-    left: 30px;
-    font-weight: 900;
- } 
+  .resumeTop {
+    padding: 0 40px;
+  }
 
-   .exPara {
-    font-size: small;
-    font-weight: 100;
-    position: relative;
-    top: 220px;
-    left: 49px;
- }  
- /*------------------------------------- Styling for footer -----------------------------------*/
+  .resumeBottom {
+    gap: 30px;
+  }
 
- footer {
-    color:white;
-   
-   
-    text-align: center;
-    background-color:green;
- }
+  .resumeLeft {
+    width: 50%;
+  }
+  .resumeRight {
+    width: 50%;
+  }
 
- .footerDiv {
-    display: flex;
-    flex-direction: column;
-    align-content:center ;
- }
+  .resumeTop h1 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .resumeTop h1 {
+    font-size: 20px;
+  }
+}
