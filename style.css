@@ -251,7 +251,6 @@ select,
 }
 
 .outerBtnContainer {
-  
   margin: 20px auto;
   border: 1px solid rgb(182, 182, 182);
   border-radius: 5px;
@@ -260,7 +259,7 @@ select,
   max-width: 600px;
 }
 .outerBtnContainer .button {
-  margin-left:30px;
+  margin-left: 30px;
 }
 
 /* responsive design  */

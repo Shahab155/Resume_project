@@ -14,7 +14,7 @@ toggleButton.addEventListener("click", () => {
 });
 
 skills.style.display = "none";
-// get all containers 
+// get all containers
 const resumeContainer = document.querySelector(
   ".resumeContainer"
 ) as HTMLDivElement;
@@ -153,7 +153,6 @@ form.addEventListener("submit", async (event: SubmitEvent) => {
     });
   }
 
-  
   displayName.innerText = name1;
   displayEmail.innerText = email;
   displayPhone.innerText = phone;
@@ -179,7 +178,7 @@ form.addEventListener("submit", async (event: SubmitEvent) => {
   resumeContainer.classList.add("hidden");
   formContainer.classList.add("hidden");
   outputResume.classList.remove("hidden");
-  document.querySelector(".outerBtnContainer")?.classList.remove("hidden")
+  document.querySelector(".outerBtnContainer")?.classList.remove("hidden");
   mainHeading.innerText = "Dynamic Resume";
 
   // get editButton
@@ -189,7 +188,7 @@ form.addEventListener("submit", async (event: SubmitEvent) => {
     outputResume.classList.add("hidden");
     updateResumeForm();
   });
-//   the function that will be re-called on edit button clicked 
+  //   the function that will be re-called on edit button clicked
   function updateResumeForm() {
     (document.getElementById("name") as HTMLInputElement).value =
       displayName.innerText || "";

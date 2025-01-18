@@ -1,27 +1,50 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+var __awaiter =
+  (this && this.__awaiter) ||
+  function (thisArg, _arguments, P, generator) {
+    function adopt(value) {
+      return value instanceof P
+        ? value
+        : new P(function (resolve) {
+            resolve(value);
+          });
+    }
     return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
+      function fulfilled(value) {
+        try {
+          step(generator.next(value));
+        } catch (e) {
+          reject(e);
+        }
+      }
+      function rejected(value) {
+        try {
+          step(generator["throw"](value));
+        } catch (e) {
+          reject(e);
+        }
+      }
+      function step(result) {
+        result.done
+          ? resolve(result.value)
+          : adopt(result.value).then(fulfilled, rejected);
+      }
+      step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
-};
+  };
 const toggleButton = document.querySelector(".toggleButton");
 const skills = document.querySelector(".skills");
 toggleButton.addEventListener("click", () => {
-    if (skills.style.display === "none") {
-        skills.style.display = "block";
-        toggleButton.innerText = "Hide Skills";
-    }
-    else {
-        skills.style.display = "none";
-        toggleButton.innerText = "Show Skills";
-    }
+  if (skills.style.display === "none") {
+    skills.style.display = "block";
+    toggleButton.innerText = "Hide Skills";
+  } else {
+    skills.style.display = "none";
+    toggleButton.innerText = "Show Skills";
+  }
 });
 skills.style.display = "none";
-// get all containers 
+// get all containers
 const resumeContainer = document.querySelector(".resumeContainer");
 const formContainer = document.querySelector(".formContainer");
 const outputResume = document.querySelector(".outputResume");
@@ -50,7 +73,8 @@ const departmentName = document.getElementById("departmentName");
 const yearFrom = document.getElementById("yearFrom");
 const yearTo = document.getElementById("yearTo");
 const displaySkills = document.getElementById("displaySkills");
-form.addEventListener("submit", (event) => __awaiter(void 0, void 0, void 0, function* () {
+form.addEventListener("submit", (event) =>
+  __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     event.preventDefault();
     const photoInput = document.getElementById("photoInput");
@@ -58,14 +82,11 @@ form.addEventListener("submit", (event) => __awaiter(void 0, void 0, void 0, fun
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
     const age = document.getElementById("age").value;
-    const experience = document.getElementById("experience")
-        .value;
-    const projects = document.getElementById("projects")
-        .value;
+    const experience = document.getElementById("experience").value;
+    const projects = document.getElementById("projects").value;
     const role = document.getElementById("role").value;
     const dob = document.getElementById("dob").value;
-    const foundation = document.getElementById("foundation")
-        .value;
+    const foundation = document.getElementById("foundation").value;
     // get Nationality input
     const nationality = document.getElementById("nationality");
     // now get the text that nationality will provide
@@ -78,33 +99,29 @@ form.addEventListener("submit", (event) => __awaiter(void 0, void 0, void 0, fun
     const province = document.getElementById("province");
     const provinceText = province.options[province.selectedIndex].text;
     const school = document.getElementById("school").value;
-    const college = document.getElementById("college")
-        .value;
+    const college = document.getElementById("college").value;
     const uni = document.getElementById("uni").value;
-    const department = document.getElementById("department")
-        .value;
-    const startYear = document.getElementById("startYear")
-        .value;
-    const endYear = document.getElementById("endYear")
-        .value;
+    const department = document.getElementById("department").value;
+    const startYear = document.getElementById("startYear").value;
+    const endYear = document.getElementById("endYear").value;
     // this logic is for image upload
     const photoFile = photoInput.files ? photoInput.files[0] : null;
     let photoBase64 = "";
     if (photoFile) {
-        photoBase64 = yield fileToBase64(photoFile);
-        localStorage.setItem("displayPhoto", photoBase64);
-        displayPhoto.src = photoBase64;
+      photoBase64 = yield fileToBase64(photoFile);
+      localStorage.setItem("displayPhoto", photoBase64);
+      displayPhoto.src = photoBase64;
     }
     // / file to base64 function
     function fileToBase64(file) {
-        return new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.onload = () => {
-                resolve(reader.result);
-            };
-            reader.onerror = reject;
-            reader.readAsDataURL(file);
-        });
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          resolve(reader.result);
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
     }
     displayName.innerText = name1;
     displayEmail.innerText = email;
@@ -130,92 +147,85 @@ form.addEventListener("submit", (event) => __awaiter(void 0, void 0, void 0, fun
     resumeContainer.classList.add("hidden");
     formContainer.classList.add("hidden");
     outputResume.classList.remove("hidden");
-    (_a = document.querySelector(".outerBtnContainer")) === null || _a === void 0 ? void 0 : _a.classList.remove("hidden");
+    (_a = document.querySelector(".outerBtnContainer")) === null ||
+    _a === void 0
+      ? void 0
+      : _a.classList.remove("hidden");
     mainHeading.innerText = "Dynamic Resume";
     // get editButton
     const editButton = document.getElementById("editButton");
     editButton.addEventListener("click", () => {
-        formContainer.classList.remove("hidden");
-        outputResume.classList.add("hidden");
-        updateResumeForm();
+      formContainer.classList.remove("hidden");
+      outputResume.classList.add("hidden");
+      updateResumeForm();
     });
-    //   the function that will be re-called on edit button clicked 
+    //   the function that will be re-called on edit button clicked
     function updateResumeForm() {
-        document.getElementById("name").value =
-            displayName.innerText || "";
-        document.getElementById("email").value =
-            displayEmail.innerText || "";
-        document.getElementById("phone").value =
-            displayPhone.innerText || "";
-        document.getElementById("age").value =
-            displayAge.innerText;
-        document.getElementById("experience").value =
-            displayExperience.innerText || "";
-        document.getElementById("projects").value =
-            displayProjects.innerText || "";
-        document.getElementById("role").value =
-            displayRoleHeading.innerText || "";
-        document.getElementById("dob").value =
-            dateOfBirth.innerText || "";
+      document.getElementById("name").value = displayName.innerText || "";
+      document.getElementById("email").value = displayEmail.innerText || "";
+      document.getElementById("phone").value = displayPhone.innerText || "";
+      document.getElementById("age").value = displayAge.innerText;
+      document.getElementById("experience").value =
+        displayExperience.innerText || "";
+      document.getElementById("projects").value =
+        displayProjects.innerText || "";
+      document.getElementById("role").value =
+        displayRoleHeading.innerText || "";
+      document.getElementById("dob").value = dateOfBirth.innerText || "";
     }
-    document.getElementById("school").value =
-        schoolName.innerText || "";
-    document.getElementById("college").value =
-        collegeName.innerText || "";
-    document.getElementById("uni").value =
-        universityName.innerText || "";
+    document.getElementById("school").value = schoolName.innerText || "";
+    document.getElementById("college").value = collegeName.innerText || "";
+    document.getElementById("uni").value = universityName.innerText || "";
     document.getElementById("department").value =
-        departmentName.innerText || "";
-    document.getElementById("startYear").value =
-        yearFrom.innerText || "";
-    document.getElementById("endYear").value =
-        yearTo.innerText || "";
+      departmentName.innerText || "";
+    document.getElementById("startYear").value = yearFrom.innerText || "";
+    document.getElementById("endYear").value = yearTo.innerText || "";
     // now add functionality to make resume shareable
     const copyLinkButton = document.getElementById("linkButton");
     // create an instance of new URLSearchParams and store all input data
     const queryParams = new URLSearchParams({
-        name1: name1,
-        email: email,
-        phone: phone,
-        age: age,
-        experience: experience,
-        projects: projects,
-        role: role,
-        dob: dob,
-        nationalityText: nationalityText,
-        cityText: cityText,
-        provinceText: provinceText,
-        school: school,
-        college: college,
-        uni: uni,
-        department: department,
-        startYear: startYear,
-        endYear: endYear,
+      name1: name1,
+      email: email,
+      phone: phone,
+      age: age,
+      experience: experience,
+      projects: projects,
+      role: role,
+      dob: dob,
+      nationalityText: nationalityText,
+      cityText: cityText,
+      provinceText: provinceText,
+      school: school,
+      college: college,
+      uni: uni,
+      department: department,
+      startYear: startYear,
+      endYear: endYear,
     });
     const uniqueURL = `${window.location.origin}?${queryParams.toString()}`;
     copyLinkButton.addEventListener("click", () => {
-        navigator.clipboard.writeText(uniqueURL);
-        alert("Link copied Successfully!");
+      navigator.clipboard.writeText(uniqueURL);
+      alert("Link copied Successfully!");
     });
     window.history.replaceState(null, ``, `${queryParams.toString()}`);
-}));
+  })
+);
 // logic for adding and deleting skills
 const addSkillsButton = document.getElementById("addSkillButton");
 const deleteSkillButton = document.getElementById("deleteSkillButton");
 addSkillsButton.addEventListener("click", () => {
-    let skillInput = document.getElementById("skillInput");
-    if (skillInput.value.trim() !== "") {
-        const li = document.createElement("li");
-        li.innerText = skillInput.value;
-        li.style.color = "rgb(61, 58, 58)";
-        li.style.marginBottom = "3px";
-        displaySkills.appendChild(li);
-        skillInput.value = "";
-        deleteSkillButton.addEventListener("click", () => {
-            displaySkills.removeChild(li);
-        });
-    }
-    else {
-        alert("Skill list is empty!");
-    }
+  let skillInput = document.getElementById("skillInput");
+  if (skillInput.value.trim() !== "") {
+    const li = document.createElement("li");
+    li.innerText = skillInput.value;
+    li.style.color = "rgb(61, 58, 58)";
+    li.style.marginBottom = "3px";
+    displaySkills.appendChild(li);
+    skillInput.value = "";
+    deleteSkillButton.addEventListener("click", () => {
+      displaySkills.removeChild(li);
+    });
+  } else {
+    alert("Skill list is empty!");
+  }
 });
