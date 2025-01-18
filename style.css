@@ -1,4 +1,3 @@
-
 * {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin: 0;
@@ -10,10 +9,10 @@
   overflow-x: hidden;
 }
 
-
 .mainHeading {
   text-align: center;
   margin: 20px 0px;
+  color: goldenrod;
 }
 
 .resumeContainer {
@@ -23,7 +22,6 @@
   border: 2px solid gray;
   background-color: #f9f6e6;
   border-radius: 5px;
-  
 }
 
 .resumeTop {
@@ -38,7 +36,7 @@
 .resumeBottom {
   display: flex;
   justify-content: space-between;
-  padding: 0 40px ;
+  padding: 0 40px;
 }
 
 .resumeTop h1 {
@@ -56,15 +54,14 @@
   border-radius: 50%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; 
-  border: 6px solid  goldenrod;
-  box-shadow: 5px 5px 5px rgba(107, 107, 107,0.4);
-
+  background-size: cover;
+  border: 6px solid goldenrod;
+  box-shadow: 5px 5px 5px rgba(107, 107, 107, 0.4);
 }
 
 .resumeTop img:hover {
   transform: scale(1.1);
-} 
+}
 
 .nameContainer {
   display: flex;
@@ -79,12 +76,9 @@
   flex-direction: column;
   gap: 40px;
   padding: 30px 0;
- 
 }
 
 .resumeRight {
- 
-
   width: 40%;
   height: 100vmin;
   display: flex;
@@ -103,7 +97,6 @@
   color: rgb(61, 58, 58);
   padding: 3px;
 }
-
 
 .education {
   display: flex;
@@ -141,17 +134,14 @@ h2,
 h3 {
   color: rgb(193, 139, 3);
   margin-bottom: 8px;
-  }
+}
 
-  h2 {
-    font-size: 1.4rem;
-  }
-
-
+h2 {
+  font-size: 1.4rem;
+}
 
 .toggleButton {
   background-color: black;
-
   color: white;
   height: 30px;
   width: 100px;
@@ -174,117 +164,15 @@ h3 {
   font-weight: bold;
 }
 
-/* responsive design  */
-@media screen and (min-width:501px) and (max-width: 768px) {
-  .conatiner {
-    /* width: 400px; */
-    height: 100vh;
-   
-  }
-
-  .resumeTop {
-    padding: 0 40px;
-  }
-
-  .resumeBottom {
-    gap: 30px;
-    margin: 0 ;
-    padding: 0 30px;
-  }
-
-  .innerContainer p {
-    font-size: 0.85rem;
-    padding: 4px;
-    color: rgb(61, 58, 58);
-  }
-  
-
-  .resumeTop h1 {
-    font-size: 32px;
-  }
-
-  .resumeTop {
-    height: 170px;
-  }
- 
-  .resumeTop img {
-    height: 100px;
-    width: 100px;
-    
-  }
-
-}
-/* responsiveness at range of width:320px and 500px   */
-@media screen and (min-width:320px) and (max-width: 500px) {
- 
- 
-
-.resumeBottom {
-  padding: 0 20px;
-  gap:30px
-}
-
-  .resumeTop {
-   height: 140px;
-    gap:40px
-  }
-
-  .resumeTop h1 {
-    font-size: 20px;
-  }
-
-  .innerContainer p {
-    font-size: 0.65rem;
-   
-  }
-
-  h2 , h3 {
-    font-size: 0.9rem;
-  }
-  .education {
-    gap:25px
-  }
-
-  .toggleButton {
-    height: 20px;
-    width: 60px;
-    font-size: 0.55rem;
-  }
-
-  .skills li {
-    font-size: 0.60rem;
-  }
-
-  .resumeTop {
-    padding: 0 20px;
-  }
-
-  .resumeTop img {
-    height: 90px;
-    width: 90px;
-   border: 4px solid  goldenrod;
-
-  }
-
-.toggleButton {
-  height: 20px;
-  width: 60px;
-}
-
-.profile p  {
-   line-height: 18px;
-   font-size: 0.65rem;
-}
-
-}
-
-
-
 /* Resume form */
 .formContainer {
   margin: 50px auto;
- max-width: 600px;
+  max-width: 600px;
   border: 2px solid black;
+}
+
+#photoInput {
+  margin: 8px 0;
 }
 
 .formContainer h1 {
@@ -292,51 +180,52 @@ h3 {
   margin-bottom: 2px solid gray;
   padding: 10px;
   color: rgb(61, 58, 58);
- 
 }
 
 form {
- 
   height: 100%;
-  padding:  20px;
+  padding: 20px;
   display: flex;
-  flex-direction: column ;
-  
+  flex-direction: column;
 }
 
 legend {
   text-align: center;
   font-size: 2rem;
+  color: rgb(52, 52, 52);
+  margin: 10px 0;
 }
 
-label 
-{
-  display: flex ;
+label {
+  display: flex;
   flex-direction: column;
-  
+  color: rgb(54, 53, 53);
 }
-input[type="text"] , [type="email"] , [type="number"], [type="date"]  , select , [type="tel"]{
+input[type="text"],
+[type="email"],
+[type="number"],
+[type="date"],
+select,
+[type="tel"] {
   height: 30px;
-  padding: 5px ;
+  padding: 5px;
   border: 2px solid rgb(203, 201, 201);
   margin: 0.7em 0;
 }
 
-textarea {
-  margin: 0.6em 0px;
-  height: 130px;
-  padding: 5px;
-}
-
 .button {
-  background-color: black;
+  background-color: rgb(36, 35, 35);
   color: white;
-  height: 40px;
+  height: 35px;
   width: 120px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   margin: 10px auto;
+}
+
+.button:hover {
+  background-color: black;
 }
 
 /* Dynamically produced Resume */
@@ -349,19 +238,6 @@ textarea {
   border-radius: 5px;
 }
 
-
-
-.btn {
-  background-color: black;
-  color: white;
-  height: 33px;
-  width: 90px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  
-}
-
 #skillInput {
   border: none;
   background-color: rgb(240, 229, 229);
@@ -369,21 +245,139 @@ textarea {
   padding: 10px;
 }
 
-
-
 .skillButtonContainer {
-  display: flex ;
-  gap:10px
+  display: flex;
+  gap: 10px;
 }
 
 .outerBtnContainer {
   display: flex;
-  justify-content: center;
-  gap:10px;
+  gap: 10px;
   border: 1px solid grey;
-  margin-bottom: 40px;
-  padding: 20xp;
+  margin: 20px auto;
+  padding: 20xp 0;
+  max-width: 600px;
 }
-body {
-  background-color: red;
+
+/* responsive design  */
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  .conatiner {
+    /* width: 400px; */
+    height: 100vh;
+  }
+
+  .resumeTop {
+    padding: 0 40px;
+  }
+
+  .innerContainer p {
+    font-size: 0.85rem;
+    padding: 4px;
+    color: rgb(61, 58, 58);
+  }
+
+  .resumeTop h1 {
+    font-size: 32px;
+  }
+
+  .resumeTop {
+    height: 170px;
+  }
+
+  .resumeTop img {
+    height: 100px;
+    width: 100px;
+  }
+
+  /* form responsiveness  */
+  input[type="text"],
+  [type="email"],
+  [type="number"],
+  [type="date"],
+  select,
+  [type="tel"] {
+    height: 30px;
+    padding: 5px;
+    border: 2px solid rgb(203, 201, 201);
+    margin: 1.1em 0;
+  }
+
+  legend {
+    font-size: 28px;
+  }
+}
+/* responsiveness at range of width:320px and 500px   */
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .resumeBottom {
+    padding: 0 26px;
+    gap: 30px;
+  }
+
+  .resumeTop {
+    height: 140px;
+    gap: 40px;
+    padding: 0 50px;
+  }
+
+  .resumeTop h1 {
+    font-size: 20px;
+  }
+
+  .innerContainer p {
+    font-size: 0.65rem;
+  }
+
+  h2,
+  h3 {
+    font-size: 0.9rem;
+  }
+  .education {
+    gap: 25px;
+  }
+
+  .toggleButton {
+    height: 20px;
+    width: 60px;
+    font-size: 0.55rem;
+  }
+
+  .skills li {
+    font-size: 0.6rem;
+  }
+
+  .resumeTop img {
+    height: 90px;
+    width: 90px;
+    border: 4px solid goldenrod;
+  }
+
+  .toggleButton {
+    height: 25px;
+    width: 80px;
+  }
+
+  .profile p {
+    line-height: 18px;
+    font-size: 0.65rem;
+  }
+
+  /* formContainer responsiveness */
+  .formContainer h1 {
+    font-size: 25px;
+  }
+
+  legend {
+    font-size: 26px;
+    margin: 10px 0;
+  }
+
+  .outerBtnContainer button {
+    width: 90px;
+  }
+
+  .skillButtonContainer button {
+    font-size: 11px;
+    height: 32px;
+    padding: 3px;
+  }
 }
