@@ -179,6 +179,7 @@ form.addEventListener("submit", async (event: SubmitEvent) => {
   resumeContainer.classList.add("hidden");
   formContainer.classList.add("hidden");
   outputResume.classList.remove("hidden");
+  document.querySelector(".outerBtnContainer")?.classList.remove("hidden")
   mainHeading.innerText = "Dynamic Resume";
 
   // get editButton
