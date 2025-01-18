@@ -1,3 +1,4 @@
+
 * {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin: 0;
@@ -9,13 +10,20 @@
   overflow-x: hidden;
 }
 
-.container {
+
+.mainHeading {
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.resumeContainer {
   max-width: 600px;
   height: 900px;
-  margin: auto;
+  margin: 20px auto;
   border: 2px solid gray;
   background-color: #f9f6e6;
   border-radius: 5px;
+  
 }
 
 .resumeTop {
@@ -48,8 +56,15 @@
   border-radius: 50%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; 
+  border: 6px solid  goldenrod;
+  box-shadow: 5px 5px 5px rgba(107, 107, 107,0.4);
+
 }
+
+.resumeTop img:hover {
+  transform: scale(1.1);
+} 
 
 .nameContainer {
   display: flex;
@@ -58,15 +73,18 @@
 }
 
 .resumeLeft {
-  width: 40%;
+  width: 50%;
   height: 100vmin;
   display: flex;
   flex-direction: column;
   gap: 40px;
   padding: 30px 0;
+ 
 }
 
 .resumeRight {
+ 
+
   width: 40%;
   height: 100vmin;
   display: flex;
@@ -80,6 +98,12 @@
   flex-direction: column;
   gap: 8px;
 }
+
+.innerContainer p {
+  color: rgb(61, 58, 58);
+  padding: 3px;
+}
+
 
 .education {
   display: flex;
@@ -117,12 +141,13 @@ h2,
 h3 {
   color: rgb(193, 139, 3);
   margin-bottom: 8px;
-}
+  }
 
-.innerContainer p {
-  font-size: 0.95rem;
-  color: rgb(61, 58, 58);
-}
+  h2 {
+    font-size: 1.4rem;
+  }
+
+
 
 .toggleButton {
   background-color: black;
@@ -150,11 +175,11 @@ h3 {
 }
 
 /* responsive design  */
-@media screen and (max-width: 768px) {
+@media screen and (min-width:501px) and (max-width: 768px) {
   .conatiner {
     /* width: 400px; */
     height: 100vh;
-    width: 100%;
+   
   }
 
   .resumeTop {
@@ -164,21 +189,201 @@ h3 {
   .resumeBottom {
     gap: 30px;
     margin: 0 ;
+    padding: 0 30px;
   }
 
-  .resumeLeft {
-    width: 90%;
+  .innerContainer p {
+    font-size: 0.85rem;
+    padding: 4px;
+    color: rgb(61, 58, 58);
   }
-  .resumeRight {
-    width: 90%;
-  }
+  
 
   .resumeTop h1 {
-    font-size: 30px;
+    font-size: 32px;
   }
+
+  .resumeTop {
+    height: 170px;
+  }
+ 
+  .resumeTop img {
+    height: 100px;
+    width: 100px;
+    
+  }
+
 }
-@media screen and (max-width: 500px) {
+/* responsiveness at range of width:320px and 500px   */
+@media screen and (min-width:320px) and (max-width: 500px) {
+ 
+ 
+
+.resumeBottom {
+  padding: 0 20px;
+  gap:30px
+}
+
+  .resumeTop {
+   height: 140px;
+    gap:40px
+  }
+
   .resumeTop h1 {
     font-size: 20px;
   }
+
+  .innerContainer p {
+    font-size: 0.65rem;
+   
+  }
+
+  h2 , h3 {
+    font-size: 0.9rem;
+  }
+  .education {
+    gap:25px
+  }
+
+  .toggleButton {
+    height: 20px;
+    width: 60px;
+    font-size: 0.55rem;
+  }
+
+  .skills li {
+    font-size: 0.60rem;
+  }
+
+  .resumeTop {
+    padding: 0 20px;
+  }
+
+  .resumeTop img {
+    height: 90px;
+    width: 90px;
+   border: 4px solid  goldenrod;
+
+  }
+
+.toggleButton {
+  height: 20px;
+  width: 60px;
+}
+
+.profile p  {
+   line-height: 18px;
+   font-size: 0.65rem;
+}
+
+}
+
+
+
+/* Resume form */
+.formContainer {
+  margin: 50px auto;
+ max-width: 600px;
+  border: 2px solid black;
+}
+
+.formContainer h1 {
+  text-align: center;
+  margin-bottom: 2px solid gray;
+  padding: 10px;
+  color: rgb(61, 58, 58);
+ 
+}
+
+form {
+ 
+  height: 100%;
+  padding:  20px;
+  display: flex;
+  flex-direction: column ;
+  
+}
+
+legend {
+  text-align: center;
+  font-size: 2rem;
+}
+
+label 
+{
+  display: flex ;
+  flex-direction: column;
+  
+}
+input[type="text"] , [type="email"] , [type="number"], [type="date"]  , select , [type="tel"]{
+  height: 30px;
+  padding: 5px ;
+  border: 2px solid rgb(203, 201, 201);
+  margin: 0.7em 0;
+}
+
+textarea {
+  margin: 0.6em 0px;
+  height: 130px;
+  padding: 5px;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  height: 40px;
+  width: 120px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
+/* Dynamically produced Resume */
+.outputResume {
+  max-width: 600px;
+  height: 900px;
+  margin: 50px auto;
+  border: 2px solid gray;
+  background-color: #f9f6e6;
+  border-radius: 5px;
+}
+
+
+
+.btn {
+  background-color: black;
+  color: white;
+  height: 33px;
+  width: 90px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+#skillInput {
+  border: none;
+  background-color: rgb(240, 229, 229);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+
+
+.skillButtonContainer {
+  display: flex ;
+  gap:10px
+}
+
+.outerBtnContainer {
+  display: flex;
+  justify-content: center;
+  gap:10px;
+  border: 1px solid grey;
+  margin-bottom: 40px;
+  padding: 20xp;
+}
+body {
+  background-color: red;
 }

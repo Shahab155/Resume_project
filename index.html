@@ -11,13 +11,16 @@
     />
   </head>
   <body>
-    <div class="container">
+    
+    
+  <h1 class="mainHeading">Static Resume</h1>
+    <div class="resumeContainer">
       <div class="resume">
         <div class="resumeTop">
           <img src="profile.png" alt="profile" />
           <div class="nameContainer">
-            <h1 id="name">Shahab Ud Din</h1>
-            <h4 id="role">Web developer</h4>
+            <h1>Shahab Ud Din</h1>
+            <h4 >Web developer</h4>
           </div>
         </div>
         <div class="resumeBottom">
@@ -25,29 +28,28 @@
             <section class="innerContainer profile">
               <h2>Profile</h2>
               <p>
-                This is <span id="name" class="bold">Shahab ud Din, </span> and
                 I am a dedicated and enthusiastic
-                <span id="role" class="bold">Web developer</span>. With a strong
-                foundation in <span id="degree">Front-End Development</span>, I
+                <span class="bold">Web developer</span>. With a strong
+                foundation in <span class="bold">Front-End Development</span>, I
                 have <span class="experience" class="bold">1 </span>year of
                 experience working on
-                <span id="projects" class="bold">Dynamic Web Applictaions</span
+                <span  class="bold">Dynamic Web Applictaions</span
                 >.
               </p>
             </section>
             <section class="innerContainer personalInfo">
               <h2>Personal Information</h2>
-              <p id="age">Age: 22</p>
-              <p id="dob">Date of Birth: 10 march 2003</p>
-              <p id="nationality">Nationality: Pakistani</p>
-              <p id="city">City: Sukkur</p>
-              <p id="province">Province: Sindh</p>
+              <p>Age: 22</p>
+              <p >Date of Birth: 10 march 2003</p>
+              <p>Nationality: Pakistani</p>
+              <p>City: Sukkur</p>
+              <p>Province: Sindh</p>
             </section>
             <section class="innerContainer contact">
               <h2>Contact</h2>
-              <p><i class="fa-solid fa-phone"></i> 0302-2187590</p>
+              <p><i class="fa-solid fa-phone"></i> 0302-2187590 </p>
               <p>
-                <i class="fa-solid fa-envelope"></i> bhuttoshahab9@gmail.com
+                <i class="fa-solid fa-envelope"></i> bhuttoshahab232@gmail.com
               </p>
               <p><i class="fa-solid fa-house"></i> Sukkur</p>
             </section>
@@ -55,25 +57,21 @@
           <div class="resumeRight">
             <section class="innerContainer education">
               <h2>Education</h2>
-              <div class="school">
+              <div >
                 <h3>School</h3>
-                <p id="schoolName">Mehran Model School</p>
-
-                <p id="year">2018</p>
+                <p >Mehran Model School (2018)</p>
               </div>
-              <div class="college">
+              <div>
                 <h3>College</h3>
-                <p id="collegeName">Mehran Model College</p>
-
-                <p id="year">2020</p>
+                <p >Mehran Model College (2020)</p>
               </div>
               <div class="university">
                 <h3>University</h3>
-                <p id="universityName">Quaid e Awam Nawabshah</p>
+                <p >Quaid e Awam Nawabshah</p>
                 <h3>Department</h3>
-                <p id="department">Electronic Engineering</p>
+                <p >Electronic Engineering</p>
 
-                <p id="year">2021-2024</p>
+                <p>2021-2024</p>
               </div>
             </section>
             <section class="innerContainer">
@@ -83,7 +81,7 @@
                 <li>CSS</li>
                 <li>Typescript</li>
                 <li>Tailwindcss</li>
-                <li>Reat Js</li>
+                <li>React Js</li>
                 <li>Next Js</li>
               </ul>
               <button class="toggleButton">Show Skills</button>
@@ -92,6 +90,175 @@
         </div>
       </div>
     </div>
+
+    <!-- resume Form -->
+
+     <div class="formContainer">
+    <h1>Generate Your Own Resume</h1>
+
+      <form id="resumeForm">
+        <legend>Personal Information</legend>
+      
+          <label for="name">Name:  </label> 
+          <input type="text" name="name" id="name" placeholder="Enter name ">
+      
+          <label for="email">Email:   </label>
+          <input type="email" name="email" id="email" placeholder="Enter email" >
+      
+          <label for="phone">Phone:   </label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter Phone number">
+      
+        <label for="photoInput">Upload Photo: </label>
+          <input type="file" name="photo" id="photoInput" >
+       
+      <label for="age">Age:  </label>
+      <input type="number" name="age" id="age" placeholder="Age">
+      <label for="experience">Experience</label>
+      <input type="number" id="experience" name="experience" placeholder="Add Experience">
+      <label for="role">Role :</label>
+      <input type="text" name="role" id="role" placeholder="Web developer">
+      <label for="projects">Projects</label>
+      <input type="text" id="projects" name="projects" placeholder="Dynamic Website" required>
+      <label for="foundation">Foundation</label>
+      <input type="text" id="foundation" name="foundation" placeholder="Front-end developer">
+      <label for="dob">Date of Birth: </label>
+      <input type="date" id="dob" name="dob" >  
+     
+   
+    <label for="nationality"> Nationality:  </label>
+    <select name="nationality" id="nationality">
+      <!-- <option>Select</option> -->
+       <option value="select">Select</option>
+      <option value="pak">Pakistani</option>
+      <option value="ind">Indian </option>
+      <option value="english"> English</option>
+      <option value="russian">Russian </option>
+    </select>
+    <label for="city">City: </label>
+    <select name="city" id="city">
+      <option >Select</option>
+     <option value="Sukkur">Sukkur</option>
+      <option value="Hyderabad">Hyderabad</option>
+      <option value="Karachi">Karachi</option>
+      <option value="Lahore ">Lahore </option>
+    </select>
+    <label for="province"> Province:  </label>
+    <select name="province" id="province" >
+      <option >Select</option>
+       <option value="sindh">Sindh</option>
+      <option value="panjab">Panjab</option>
+      <option value="KPK">KPK</option>
+      <option value="Balochistan">Balochistan</option>
+    </select>
+
+    <legend>Education</legend>
+    <label for="school">School</label>
+    <input type="text" id="school" name="school" placeholder="school">
+    <label for="college">College</label>
+    <input type="text" id="college" name="college" placeholder="College">
+    <label for="uni">University</label>
+    <input type="text" name="university" id="uni" >
+    <label for="department">Department</label>
+    <input type="text" name="department" id="department" >
+    <label for="startYear">Start Year: </label>
+    <input type="number" id="startYear" name="startYear" >
+    <label for="endYear">End Year:</label>
+    <input type="number" id="endYear" name="endYear"/>
+  
+    <button type="submit"  class="button">Generate Resume</button>
+      </form>
+     </div>
+<!-- Dispaly Resume -->
+<div class="outputResume hidden">
+  <div class="resume">
+    <div class="resumeTop">
+      <img src="" alt="profile" id="displayPhoto"  />
+     <div class="nameContainer">
+        <h1 id="displayName"></h1>
+        <h4 id="displayRoleHeading"></h4>
+      </div>
+    </div>
+    <div class="resumeBottom">
+      <div class="resumeLeft">
+        <section class="innerContainer profile">
+          <h2>Profile</h2>
+          <p>
+            I am a dedicated and enthusiastic
+            <span id="displayRoleSpan" class="bold"> </span>. With a strong
+            foundation in <span id="displayFoundation" class="bold"></span>, I
+            have <span  id="displayExperience" class="bold"> </span>year of
+            experience working on
+            <span id="displayProjects" class="bold"> </span
+            >.
+          </p>
+        </section>
+        <section class="innerContainer personalInfo">
+          <h2>Personal Information</h2>
+          <p id="displayAge"></p>
+          <p id="displayDOB"></p>
+          <p id="displayNationality"> </p>
+          <p id="displayCityParagraph"></p>
+          <p id="displayProvince"></p>
+         
+        </section>
+        <section class="innerContainer contact">
+          <h2>Contact</h2>
+          <p><i class="fa-solid fa-phone"></i> <span id="displayPhone"></span> </p>
+          <p>
+            <i class="fa-solid fa-envelope"></i> <span id="displayEmail"></span>
+          </p> 
+          <p><i class="fa-solid fa-house"></i><span id="displayCitySpan"></span></p>
+        </section>
+      </div>
+      <div class="resumeRight">
+        <section class="innerContainer education">
+          <h2>Education</h2>
+          <div class="school">
+            <h3>School</h3>
+            <p id="schoolName"></p>
+          </div>
+          <div class="college">
+            <h3>College</h3>
+            <p id="collegeName"></p>
+          </div>
+          <div class="university">
+            <h3>University</h3>
+            <p id="universityName"></p>
+            <h3>Department</h3>
+            <p id="departmentName"></p>
+
+            <p><span id="yearFrom"></span> <span id="yearTo"></span></p>
+          </div>
+        </section>
+        <section class="innerContainer">
+          <h2>Skills</h2>
+          <ul id="displaySkills" >
+            
+          </ul>
+          
+       <input type="text" id="skillInput" placeholder="Add Skill">
+<div class="skillButtonContainer">
+  <button id="addSkillButton" class="btn">Add Skills</button>
+  <button id="deleteSkillButton" class="btn" style="background-color: red;" >Delete Skills</button>
+</div>
+      
+
+        </section>
+      </div>
+     
+    </div>
+ 
+  </div>
+ 
+ 
+</div>
+<div class="outerBtnContainer">
+  <button id="backToForm" onclick="window.location.href = 'index.html'" class="btn">Back</button>
+  <button id="editButton" class="btn">Edit Resume</button>
+  <button id="linkButton" class="btn">Copy Link</button>
+</div>
+
+
     <script src="script.js"></script>
   </body>
 </html>
