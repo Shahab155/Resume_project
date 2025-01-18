@@ -251,12 +251,16 @@ select,
 }
 
 .outerBtnContainer {
-  display: flex;
-  gap: 10px;
-  border: 1px solid grey;
+  
   margin: 20px auto;
+  border: 1px solid rgb(182, 182, 182);
+  border-radius: 5px;
+  background-color: #f9f6e6;
   padding: 20xp 0;
   max-width: 600px;
+}
+.outerBtnContainer .button {
+  margin-left:30px;
 }
 
 /* responsive design  */
