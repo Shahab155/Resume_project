@@ -5,8 +5,9 @@
   box-sizing: border-box;
 }
 
-.body {
+body {
   overflow-x: hidden;
+  background-color: wheat
 }
 
 .mainHeading {
