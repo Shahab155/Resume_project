@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <h1 class="mainHeading">Static Resume</h1>
+    <h1 class="mainHeading"><span id="element"></span></h1>
     <div class="resumeContainer">
       <div class="resume">
         <div class="resumeTop">
@@ -339,5 +339,12 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed('#element', {
+        strings: ['Static Resume.', 'Dynamic Resume','Shareable Resume','Edit able'],
+        typeSpeed: 50,
+      });
+    </script>
   </body>
 </html>
